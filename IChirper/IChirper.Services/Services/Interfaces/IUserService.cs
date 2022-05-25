@@ -7,7 +7,7 @@ namespace IChirper.Services.Interfaces;
 public interface IUserService
 {
     Task<User> GetUserWithViewModel(UserViewModel model);
-    Task<IdentityResult> SaveNewUser(UserViewModel user, string password, string role);
+    Task<IdentityResult> SaveNewUser(RegisterViewModel user, string password, string role);
     Task<SignInResult> LoginUser(LoginViewModel model);
     ValueTask LogoutUser();
     Task<UserViewModel> GetUserByEmail(string email);
