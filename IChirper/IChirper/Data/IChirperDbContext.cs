@@ -11,8 +11,6 @@ public class IChirperDbContext : IdentityDbContext
         : base(options)
     {
         _configuration = configuration;
-
-        Database.EnsureCreated();
     }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -22,6 +20,7 @@ public class IChirperDbContext : IdentityDbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ConfigureIdentityRoles();
 
         base.OnModelCreating(modelBuilder);
     }
