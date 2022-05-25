@@ -15,7 +15,7 @@ public class UserService : IUserService
 
     private static UserViewModel GetUserViewModel(User model)
     {
-        return new UserViewModel { Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, NickName = model.NickName, Age = model.Age, UserName = model.Email, RegisterDate = model.RegisterDate, LastLoginDate = model.LastLoginDate, Status = model.Status };
+        return new UserViewModel { Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, NickName = model.NickName, Age = model.Age, RegisterDate = model.RegisterDate, LastLoginDate = model.LastLoginDate, Status = model.Status };
     }
 
     private List<UserViewModel> GetUserViewModels(List<User> models)
@@ -25,7 +25,7 @@ public class UserService : IUserService
 
     public async Task<User> GetUserWithViewModel(UserViewModel model)
     {
-        return (await _userRepository.GetSingleAsync(u => u.UserName == model.UserName))!;
+        return (await _userRepository.GetSingleAsync(u => u.UserName == model.Email))!;
     }
 
     public UserService(IUserRepository userRepository, UserManager<User> userManager, IRoleService roleService, SignInManager<User> signInManager)
@@ -36,9 +36,9 @@ public class UserService : IUserService
         _signInManager = signInManager;
     }
 
-    public async Task<IdentityResult> SaveNewUser(UserViewModel model, string password, string role)
+    public async Task<IdentityResult> SaveNewUser(RegisterViewModel model, string password, string role)
     {
-        var userToSave = new User { Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, NickName = model.NickName, Age = model.Age, UserName = model.Email, RegisterDate = model.RegisterDate, LastLoginDate = model.LastLoginDate, Status = model.Status };
+        var userToSave = new User { Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, NickName = model.NickName, Age = model.Age, UserName = model.Email, RegisterDate = DateTime.Now, LastLoginDate = DateTime.Now, Status = "Active User"};
         
         var result = await _userManager.CreateAsync(userToSave, password);
         _userManager.PasswordHasher = new PasswordHasher<User>();
@@ -86,7 +86,7 @@ public class UserService : IUserService
 
     public async Task Delete(UserViewModel model)
     {
-        var user = await _userRepository.GetSingleAsync(u => u.UserName == model.UserName);
+        var user = await _userRepository.GetSingleAsync(u => u.UserName == model.Email);
         _userRepository.Delete(user!);
         await _userRepository.CommitAsync();
     }
