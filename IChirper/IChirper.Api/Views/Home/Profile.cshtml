@@ -1,0 +1,15 @@
+@model IChirper.ViewModels.UserViewModel
+@using IChirper.Services.Interfaces
+
+<div class="d-flex align-items-center">
+    <div class="row">
+        <div class="">     
+            <h3 class = "display-2 lng-ProfileText theme-main-text">Your profile:</h3>      
+            <br/>
+            <h3 class="display-2 theme-main-text">@Model.FirstName @Model.LastName</h3>
+            <h4 class="lng-NickNameRegister theme-main-text">Nickname:</h4><h4 class="theme-main-text">@Model.NickName</h4><br/>
+            <h4 class="lng-AgeRegister theme-main-text">Age:</h4><h4 class="theme-main-text">@Model.Age</h4><br/>
+            <h5 class="lng-ProfileRegistrationDate theme-main-text">Registration date:</h5><h5 class="theme-main-text">@Model.RegisterDate</h5><br/>
+        </div>
+    </div>
+</div>
