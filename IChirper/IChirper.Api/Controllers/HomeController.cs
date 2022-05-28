@@ -3,6 +3,7 @@ using IChirper.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using IChirper.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using Xunit;
 
 namespace IChirper.Controllers;
 
@@ -13,16 +14,16 @@ public class HomeController : Controller
     {
         _userService = userService;
     }
-
+    
     public IActionResult Index()
     {
-        return View();
+        return View("Index");
     }
 
     [Authorize]
     public async Task<IActionResult> Profile()
     {
-        var user = await _userService.GetUserByEmail(User!.Identity!.Name!);
+        var user = await _userService.GetUserByEmail(User.Identity?.Name!);
         
         return View(user);
     }

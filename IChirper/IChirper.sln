@@ -2,11 +2,11 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IChirper.Api", "IChirper.Api\IChirper.Api.csproj", "{655B06AD-261F-4A85-973D-C3C38C547C63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IChirper.UnitTests", "IChirper.UnitTests\IChirper.UnitTests.csproj", "{4F32D6D8-496D-470C-AFF4-F3683ECBE4B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IChirper.Tests", "IChirper.Tests\IChirper.Tests.csproj", "{E26F7266-09A4-47EC-ABC5-8FE8F8CC219C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IChirper.Services", "IChirper.Services\IChirper.Services.csproj", "{7B899414-C956-4C5A-9F53-CFD846CB98D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IChirper.Repositories", "IChirper.Repositories\IChirper.Repositories.csproj", "{9CFCC557-6E30-4592-B851-012D702C04F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IChirper.Repositories", "IChirper.Repositories\IChirper.Repositories.csproj", "{7889EE51-50E7-4844-A191-78E409817F3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IChirper.Services", "IChirper.Services\IChirper.Services.csproj", "{47389630-3FD0-41A0-9E5F-F275A46614F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,18 +18,18 @@ Global
 		{655B06AD-261F-4A85-973D-C3C38C547C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{655B06AD-261F-4A85-973D-C3C38C547C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{655B06AD-261F-4A85-973D-C3C38C547C63}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F32D6D8-496D-470C-AFF4-F3683ECBE4B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F32D6D8-496D-470C-AFF4-F3683ECBE4B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F32D6D8-496D-470C-AFF4-F3683ECBE4B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F32D6D8-496D-470C-AFF4-F3683ECBE4B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B899414-C956-4C5A-9F53-CFD846CB98D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B899414-C956-4C5A-9F53-CFD846CB98D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B899414-C956-4C5A-9F53-CFD846CB98D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B899414-C956-4C5A-9F53-CFD846CB98D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7889EE51-50E7-4844-A191-78E409817F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7889EE51-50E7-4844-A191-78E409817F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7889EE51-50E7-4844-A191-78E409817F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7889EE51-50E7-4844-A191-78E409817F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E26F7266-09A4-47EC-ABC5-8FE8F8CC219C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E26F7266-09A4-47EC-ABC5-8FE8F8CC219C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E26F7266-09A4-47EC-ABC5-8FE8F8CC219C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E26F7266-09A4-47EC-ABC5-8FE8F8CC219C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CFCC557-6E30-4592-B851-012D702C04F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CFCC557-6E30-4592-B851-012D702C04F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CFCC557-6E30-4592-B851-012D702C04F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CFCC557-6E30-4592-B851-012D702C04F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47389630-3FD0-41A0-9E5F-F275A46614F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47389630-3FD0-41A0-9E5F-F275A46614F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47389630-3FD0-41A0-9E5F-F275A46614F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47389630-3FD0-41A0-9E5F-F275A46614F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
