@@ -1,10 +1,8 @@
-using IChirper.Models;
 using IChirper.Services.Interfaces;
 using IChirper.ViewModels;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IChirper.Controllers;
+namespace IChirper.@base.Controllers;
 
 public class AccountController : Controller
 {
@@ -27,7 +25,7 @@ public class AccountController : Controller
     public async Task<IActionResult> Register(RegisterViewModel model)
     {
         if (!ModelState.IsValid) 
-            return await Task.Run(() => View(model));
+            return await Task.Run(() => View("Register", model));
 
         var result = await _userService.SaveNewUser(model, model.Password!, model.Role!);
         
@@ -35,15 +33,13 @@ public class AccountController : Controller
         {
             return RedirectToAction("Index", "Home");
         }
-        else
+
+        foreach (var error in result.Errors)
         {
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError(string.Empty, error.Description);
-            }
+            ModelState.AddModelError(string.Empty, error.Description);
         }
-        
-        return await Task.Run(() => View(model));
+
+        return await Task.Run(() => View("Register", model));
     }
     
     [HttpGet]
@@ -56,7 +52,7 @@ public class AccountController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Login(LoginViewModel model)
     {
-        if (!ModelState.IsValid) return await Task.Run(() => View(model));
+        if (!ModelState.IsValid) return await Task.Run(() => View("Login", model));
 
         if (_userValidation.IsUserNullOrBlocked(model.Email!)) 
             return RedirectToAction("Index", "Home");
@@ -69,14 +65,14 @@ public class AccountController : Controller
             
             user.LastLoginDate = DateTime.Now;
 
-            await _userService.Save();
-            
-            return RedirectToAction("Index", "Home");
+            var saveResult = _userService.Save();
+
+            return !saveResult.IsCompletedSuccessfully ? RedirectToAction("Login", "Account") : RedirectToAction("Index", "Home");
         }
 
         ModelState.AddModelError("", "Incorrect email and (or) password!");
 
-        return await Task.Run(() => View(model));
+        return await Task.Run(() => View("Login", model));
     }
     
     
