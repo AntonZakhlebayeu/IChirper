@@ -13,7 +13,7 @@ public class UserService : IUserService
     private readonly UserManager<User> _userManager;
     private readonly IRoleService _roleService;
 
-    private static UserViewModel GetUserViewModel(User model)
+    public UserViewModel GetUserViewModel(User model)
     {
         return new UserViewModel { Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, NickName = model.NickName, Age = model.Age, RegisterDate = model.RegisterDate, LastLoginDate = model.LastLoginDate, Status = model.Status };
     }

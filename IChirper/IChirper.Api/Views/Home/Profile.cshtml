@@ -1,5 +1,9 @@
+@using IChirper.Services.Interfaces
 @model IChirper.ViewModels.UserViewModel
-
+@{
+    var userService = ViewBag.userService as IUserService;
+    var roleService = ViewBag.roleService as IRoleService;
+}
 
 <div class="d-flex align-items-center">
     <div class="row">
@@ -10,6 +14,7 @@
             <h4 class="lng-NickNameRegister theme-page-text">Nickname:</h4><h4 class="theme-page-text">@Model.NickName</h4><br/>
             <h4 class="lng-AgeRegister theme-page-text">Age:</h4><h4 class="theme-page-text">@Model.Age</h4><br/>
             <h5 class="lng-ProfileRegistrationDate theme-page-text">Registration date:</h5><h5 class="theme-page-text">@Model.RegisterDate</h5><br/>
+            <h5 class="lng-UserRole theme-page-text">Role:<h5 class="theme-page-text">@roleService!.GetUserRole(await userService!.GetUserWithViewModel(Model))</h5></h5>
         </div>
     </div>
 </div>

@@ -1,3 +1,11 @@
-﻿@{
+﻿@using IChirper.Services.Interfaces
+@inject IRoleService RoleService
+@inject IUserService UserService;
+
+@{
     Layout = "_Layout";
+    ViewBag.roleService = RoleService;
+    ViewBag.userService = UserService;
 }
+
+
