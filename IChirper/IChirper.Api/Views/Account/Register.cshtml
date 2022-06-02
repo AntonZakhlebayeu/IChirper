@@ -1,9 +1,18 @@
 @model IChirper.ViewModels.RegisterViewModel
 
+<link rel="stylesheet" type="text/css" href="~/css/Dropdown.css"/>
 
-<h2 class = "lng-NewUserRegistration theme-page-text">New User Registration</h2>
+<h2 class = "lng-NewUserRegistration theme-page-text" style="margin-bottom: 16px">New User Registration</h2>
+
 <form method="post" asp-controller="Account" asp-action="Register" class="theme-page-text">
     <div asp-validation-summary="ModelOnly"></div>
+    
+    <h3 class="theme-page-text">Add your photo:</h3>
+    <div class="drop-zone col-4" style="margin-bottom: 12px">
+        <span class="drop-zone__prompt lng-DropImage lng-DropImageCollection theme-page-text">Drop file here or click to upload</span>
+        <input type="file" name="myFile" class="drop-zone__input" accept="image/*"/>
+    </div>
+
     <div>
         <label asp-for="Email" class="lng-EnterEmailLogin"></label><br />
         <input asp-for="Email" class="form-control" placeholder="example@example.com"/>
@@ -61,3 +70,5 @@
         <button type="submit" class="btn btn-outline-dark lng-RegisterButton">Register!</button>
     </div>
 </form>
+
+<script src="~/js/Shared/Dropdown.js"></script>
