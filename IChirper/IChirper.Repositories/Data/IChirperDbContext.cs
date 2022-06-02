@@ -17,12 +17,13 @@ public class IChirperDbContext : IdentityDbContext<User>
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(_configuration.GetConnectionString("MSSqlConnectionString"), b => b.MigrationsAssembly("IChirper.Repositories"));
+        optionsBuilder.UseSqlServer(_configuration.GetConnectionString("MSSqlConnectionString"), b => b.MigrationsAssembly("IChirper.Api"));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ConfigureIdentityRoles();
+        modelBuilder.ConfigurePosts();
 
         base.OnModelCreating(modelBuilder);
     }
