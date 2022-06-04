@@ -9,6 +9,8 @@ public static class Repositories
     public static void AddRepositories(this IServiceCollection serviceCollection)
     {
         serviceCollection.AddScoped<IUserRepository, UserRepository>()
-            .AddScoped<IRoleRepository, RoleRepository>();
+            .AddScoped<IRoleRepository, RoleRepository>()
+            .AddScoped<IPageRepository, PageRepository>()
+            .AddScoped<IPostRepository, PostRepository>();
     }
 }

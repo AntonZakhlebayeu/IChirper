@@ -26,8 +26,4 @@
       <ProjectReference Include="..\IChirper.Services\IChirper.Services.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Pages\Page" />
-    </ItemGroup>
-
 </Project>

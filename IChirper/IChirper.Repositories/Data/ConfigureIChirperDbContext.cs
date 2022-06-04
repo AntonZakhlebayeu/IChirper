@@ -32,6 +32,23 @@ public static class ConfigureIChirperDbContext
         modelBuilder.Entity<User>().HasAlternateKey(u => u.IntId);
     }
 
+    public static void ConfigurePage(this ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Page>(m =>
+        {
+            m.ToTable("Page");
+            m.HasKey(p => p.GuidId);
+            m.HasAlternateKey(p => p.Id);
+            m.Property(p => p.Title).IsRequired();
+            m.Property(p => p.PageDescription).IsRequired();
+            m.Property(p => p.CreatedAt).IsRequired();
+            m.Property(p => p.IsPrivate).IsRequired();
+            m.Property(p => p.UpdatedAt);
+            m.Property(p => p.Tags);
+            m.Property(p => p.FileName);
+        });
+    }
+
     public static void ConfigurePosts(this ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Post>(m =>

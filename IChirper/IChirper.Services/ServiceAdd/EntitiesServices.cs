@@ -10,6 +10,8 @@ public static class EntitiesService
     public static void AddEntitiesServices(this IServiceCollection serviceCollection)
     {
         serviceCollection.AddScoped<IUserService, UserService>()
-            .AddScoped<IRoleService, RoleService>();
+            .AddScoped<IRoleService, RoleService>()
+            .AddScoped<IPageService, PageService>()
+            .AddScoped<IPostService, PostService>();
     }
 }

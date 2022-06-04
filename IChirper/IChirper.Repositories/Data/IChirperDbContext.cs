@@ -1,6 +1,7 @@
 ﻿using IChirper.Controllers.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations.Internal;
 using Microsoft.Extensions.Configuration;
 
 namespace IChirper.Controllers.Data;
@@ -25,6 +26,7 @@ public class IChirperDbContext : IdentityDbContext<User>
         modelBuilder.ConfigureUser();
         modelBuilder.ConfigureIdentityRoles();
         modelBuilder.ConfigurePosts();
+        modelBuilder.ConfigurePage();
 
         base.OnModelCreating(modelBuilder);
     }
