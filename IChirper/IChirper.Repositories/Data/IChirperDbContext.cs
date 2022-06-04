@@ -1,9 +1,9 @@
-﻿using IChirper.Models;
+﻿using IChirper.Controllers.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace IChirper.Data;
+namespace IChirper.Controllers.Data;
 
 public class IChirperDbContext : IdentityDbContext<User>
 {
@@ -22,6 +22,7 @@ public class IChirperDbContext : IdentityDbContext<User>
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ConfigureUser();
         modelBuilder.ConfigureIdentityRoles();
         modelBuilder.ConfigurePosts();
 

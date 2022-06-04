@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace IChirper.Data.Migrations
+namespace IChirper.Controllers.Data.Migrations
 {
     public partial class FixedRoles : Migration
     {

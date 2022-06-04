@@ -1,4 +1,4 @@
-namespace IChirper.ViewModels;
+namespace IChirper.Controllers.ViewModels;
 
 public class ErrorViewModel
 {

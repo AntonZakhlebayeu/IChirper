@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics;
-using IChirper.Services.Interfaces;
-using IChirper.ViewModels;
+using IChirper.Controllers.Services.Interfaces;
+using IChirper.Controllers.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IChirper.@base.Controllers;
+namespace IChirper.Controllers;
 
 public class HomeController : Controller
 {

@@ -1,9 +1,9 @@
-using IChirper.Data;
-using IChirper.Models;
+using IChirper.Controllers.Data;
+using IChirper.Controllers.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace IChirper.ServiceAdd;
+namespace IChirper.Controllers.ServiceAdd;
 
 public static class ConfigureIdentity
 {

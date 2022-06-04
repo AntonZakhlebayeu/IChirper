@@ -1,8 +1,8 @@
-using IChirper.Data.Interfaces;
-using IChirper.Data.Repositories;
+using IChirper.Controllers.Data.Interfaces;
+using IChirper.Controllers.Data.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace IChirper.ServiceAdd;
+namespace IChirper.Controllers.ServiceAdd;
 
 public static class Repositories
 {

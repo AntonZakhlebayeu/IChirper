@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace IChirper.@base.Migrations
+namespace IChirper.Controllers.@base.Migrations
 {
     public partial class AddedAdditionalUserFields : Migration
     {

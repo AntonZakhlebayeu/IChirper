@@ -1,11 +1,11 @@
-using IChirper.@base.Controllers;
-using IChirper.Services.Classes;
-using IChirper.Services.Interfaces;
+using IChirper.Controllers;
+using IChirper.Controllers.Services.Interfaces;
+using IChirper.Controllers.Services.Classes;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
 
-namespace IChirper.Tests.HomeControllerTests;
+namespace IChirper.Controllers.Tests.HomeControllerTests;
 
 public class HomeControllerTest
 {

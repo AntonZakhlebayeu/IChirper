@@ -1,12 +1,12 @@
-using IChirper.@base.Controllers;
-using IChirper.Services.Interfaces;
+using IChirper.Controllers;
+using IChirper.Controllers.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
 using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
-using static IChirper.Tests.AccountControllerTests.GetMockData;
+using static IChirper.Controllers.Tests.AccountControllerTests.GetMockData;
 
-namespace IChirper.Tests.AccountControllerTests;
+namespace IChirper.Controllers.Tests.AccountControllerTests;
 
 public class LoginTest
 {

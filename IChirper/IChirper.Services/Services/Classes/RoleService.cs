@@ -1,10 +1,10 @@
-using IChirper.Data.Interfaces;
-using IChirper.Models;
-using IChirper.Services.Interfaces;
-using IChirper.ViewModels;
+using IChirper.Controllers.Data.Interfaces;
+using IChirper.Controllers.Models;
+using IChirper.Controllers.Services.Interfaces;
+using IChirper.Controllers.ViewModels;
 using Microsoft.AspNetCore.Identity;
 
-namespace IChirper.Services.Classes;
+namespace IChirper.Controllers.Services.Classes;
 
 public class RoleService : IRoleService
 {

@@ -1,4 +1,4 @@
-using IChirper.ServiceAdd;
+using IChirper.Controllers.ServiceAdd;
 
 var builder = WebApplication.CreateBuilder(args);
 

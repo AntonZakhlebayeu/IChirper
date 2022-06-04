@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace IChirper.Data.Migrations
+namespace IChirper.Controllers.Data.Migrations
 {
     public partial class AddRoles : Migration
     {

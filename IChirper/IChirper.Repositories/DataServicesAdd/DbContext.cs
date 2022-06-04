@@ -1,8 +1,8 @@
-using IChirper.Data;
+using IChirper.Controllers.Data;
 using Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace IChirper.ServiceAdd;
+namespace IChirper.Controllers.ServiceAdd;
 
 public static class DbContext
 {

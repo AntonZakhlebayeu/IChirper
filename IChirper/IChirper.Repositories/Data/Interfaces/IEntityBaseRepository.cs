@@ -1,7 +1,7 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace IChirper.Data.Interfaces;
+namespace IChirper.Controllers.Data.Interfaces;
 public interface IEntityBaseRepository<T>  where T : class
 {
     void Add(T entity);

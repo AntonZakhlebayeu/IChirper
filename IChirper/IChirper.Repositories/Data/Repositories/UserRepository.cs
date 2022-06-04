@@ -1,7 +1,7 @@
-using IChirper.Models;
-using IChirper.Data.Interfaces;
+using IChirper.Controllers.Data.Interfaces;
+using IChirper.Controllers.Models;
 
-namespace IChirper.Data.Repositories;
+namespace IChirper.Controllers.Data.Repositories;
 
 public class UserRepository : EntityBaseRepository<User>, IUserRepository
 {

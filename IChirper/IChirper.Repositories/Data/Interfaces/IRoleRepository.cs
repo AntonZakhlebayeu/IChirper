@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace IChirper.Data.Interfaces;
+namespace IChirper.Controllers.Data.Interfaces;
 
 public interface IRoleRepository : IEntityBaseRepository<IdentityRole>
 {
