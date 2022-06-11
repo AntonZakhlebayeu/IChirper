@@ -7,7 +7,7 @@ public class PageController : Controller
 {
     
     [HttpGet]
-    public IActionResult CreatePageView()
+    public IActionResult CreatePage()
     {
         return View("CreatePage");
     }
