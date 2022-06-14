@@ -55,4 +55,17 @@ public static class GetMockData
             new() {Id = 4, Author = "Test", Title = "Test", PageDescription = "Test", CreatedAt = "Test", UpdatedAt = "Test"},
         };
     }
+
+    public static PageViewModel GetTestPage(int id)
+    {
+        return new PageViewModel()
+        {
+            Id = 1,
+            Author = "Test",
+            CreatedAt = DateTime.Now.ToString(),
+            UpdatedAt = DateTime.Now.ToString(),
+            PageDescription = "Test",
+            Title = "Test"
+        };
+    }
 }
