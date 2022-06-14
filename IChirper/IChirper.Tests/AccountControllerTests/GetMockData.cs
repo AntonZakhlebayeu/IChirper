@@ -44,4 +44,15 @@ public static class GetMockData
             Password = "123456A1"
         };
     }
+
+    public static List<PageViewModel> GetTestPage()
+    {
+        return new List<PageViewModel>()
+        {
+            new() {Id = 1, Author = "Test", Title = "Test", PageDescription = "Test", CreatedAt = "Test", UpdatedAt = "Test"},
+            new() {Id = 2, Author = "Test", Title = "Test", PageDescription = "Test", CreatedAt = "Test", UpdatedAt = "Test"},
+            new() {Id = 3, Author = "Test", Title = "Test", PageDescription = "Test", CreatedAt = "Test", UpdatedAt = "Test"},
+            new() {Id = 4, Author = "Test", Title = "Test", PageDescription = "Test", CreatedAt = "Test", UpdatedAt = "Test"},
+        };
+    }
 }
