@@ -1,6 +1,7 @@
 @using IChirper.Controllers.Services.Interfaces
 @model IChirper.Controllers.ViewModels.UserViewModel
 @{
+    ViewData["Title"] = Model.NickName;
     var userService = ViewBag.userService as IUserService;
     var roleService = ViewBag.roleService as IRoleService;
 }

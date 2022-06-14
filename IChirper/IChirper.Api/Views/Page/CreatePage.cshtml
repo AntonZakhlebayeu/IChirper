@@ -2,12 +2,13 @@
 @using IChirper.Controllers.Services.Interfaces
 
 @{
+    ViewData["Title"] = "Create Page";
     var data = ViewBag.userService as IUserService;
 }
 
 <link rel="stylesheet" type="text/css" href="~/css/Dropdown.css"/>
 
-<h2 class = "lng-NewUserRegistration theme-page-text" style="margin-bottom: 16px">New User Registration</h2>
+<h2 class = "lng-NewUserRegistration theme-page-text" style="margin-bottom: 16px">New Page</h2>
 
 <form method="post" asp-controller="Page" asp-action="CreatePage" class="theme-page-text">
     <div asp-validation-summary="ModelOnly"></div>

@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - IChirper.Base</title>
+    <title>@ViewData["Title"] - IChirper</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" title="theme" href="#" asp-append-version="true"/>
     <link rel="stylesheet" href="~/IChirper.styles.css" asp-append-version="true"/>
@@ -31,7 +31,7 @@
                     {
                         <ul class="nav-item">
                             <div class="dropdown show" style="position: relative">
-                                <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     @User.Identity.Name
                                 </button>
 
@@ -50,7 +50,7 @@
                         @if (User.Identity.IsAuthenticated)
                         {
                             <form class="form-inline" asp-controller="Page" asp-action="CreatePage" method="get">
-                                <button class="btn btn-outline-primary">Create Page</button>
+                                <button class="btn btn-primary">Create Page</button>
                             </form>
                         }
                     }
