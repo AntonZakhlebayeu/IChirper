@@ -1,4 +1,7 @@
+using IChirper.Controllers.Models;
 using IChirper.Controllers.ViewModels;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace IChirper.Controllers.Services.Interfaces;
 

@@ -22,6 +22,8 @@ public class PageController : Controller
     [HttpPost]
     public async Task<IActionResult> CreatePage(CreatePageViewModel model)
     {
+        if (!ModelState.IsValid) return View("CreatePage", model);
+
         await _pageService.AddNewPage(model);
 
         return await Task.Run(() => RedirectToAction("Index", "Home"));

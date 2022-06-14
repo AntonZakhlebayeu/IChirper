@@ -17,8 +17,9 @@ public class ProfileTest
         
         //Arrange
         var mockUserService = new Mock<IUserService>();
+        var mockPageService = new Mock<IPageService>();
         mockUserService.Setup(repo=> repo.GetUserByEmail(email)).Returns(GetTestUser());
-        var homeController = new HomeController(mockUserService.Object);
+        var homeController = new HomeController(mockUserService.Object, mockPageService.Object);
 
         //Act
         homeController.ControllerContext = GetMockControllerContext();

@@ -8,7 +8,7 @@ public static class DbContext
 {
     public static void AddDbContext(this IServiceCollection services)
     {
-        services.AddDbContext<IChirperDbContext>();
+        services.AddDbContext<IChirperDbContext>(ServiceLifetime.Transient);
         services.AddDatabaseDeveloperPageExceptionFilter();
     }
 }
