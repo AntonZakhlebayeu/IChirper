@@ -46,6 +46,7 @@ public class PageService : IPageService
     public async Task<PageViewModel> GetPageById(int id)
     {
         var page = await _pageRepository.FindWithAlternateKey(id);
-        return GetPageViewModel(page);
+
+        return page == null ? null! : GetPageViewModel(page);
     }
 }

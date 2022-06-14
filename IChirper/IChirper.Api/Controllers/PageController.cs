@@ -32,10 +32,12 @@ public class PageController : Controller
     [HttpGet]
     public async Task<IActionResult> ViewPage(int pageId)
     {
-        if (pageId == 0) return NoContent();
+        if (pageId == 0) return RedirectToAction("Index", "Home");
         
         var page = await _pageService.GetPageById(pageId);
 
+        if (page == null) return RedirectToAction("Index", "Home");
+        
         return View("PageView", page);
     }
 }

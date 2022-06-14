@@ -65,12 +65,11 @@ public class CreatePageTest
         };
 
         //Act
-        var result = await pageController.CreatePage(pageToCreate) as ViewResult;
+        var result = await pageController.CreatePage(pageToCreate) as RedirectToActionResult;
 
         //Assert
-        var viewResult = Assert.IsType<ViewResult>(result);
-        Assert.NotNull(viewResult.Model);
-        Assert.Equal("CreatePage", viewResult.ViewName);
-        Assert.Equal(pageToCreate, viewResult.Model);
+        var redirectToActionResult = Assert.IsType<RedirectToActionResult>(result);
+        Assert.Equal("Index", redirectToActionResult.ActionName);
+        Assert.Equal("Home", redirectToActionResult.ControllerName);
     }
 }
