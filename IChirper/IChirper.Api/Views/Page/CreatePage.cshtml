@@ -1,14 +1,49 @@
-@model dynamic
+@model IChirper.Controllers.ViewModels.CreatePageViewModel
+@using IChirper.Controllers.Services.Interfaces
 
-<!DOCTYPE html>
+@{
+    var data = ViewBag.userService as IUserService;
+}
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+<link rel="stylesheet" type="text/css" href="~/css/Dropdown.css"/>
+
+<h2 class = "lng-NewUserRegistration theme-page-text" style="margin-bottom: 16px">New User Registration</h2>
+
+<form method="post" asp-controller="Page" asp-action="CreatePage" class="theme-page-text">
+    <div asp-validation-summary="ModelOnly"></div>
+    <input type="hidden" name="Author" value="@data!.GetUserByEmail(User.Identity!.Name!).GetAwaiter().GetResult().NickName" asp-for="Author"/>
+    
+    <div>
+        <label asp-for="Title" class="lng-FirstNameRegister"></label><br />
+        <input asp-for="Title" class="form-control"/>
+        <span asp-validation-for="Title"></span>
+    </div>
+    <br/>
+    
+    <div>
+        <label asp-for="PageDescription" class="lng-EnterEmailLogin"></label><br />
+        <input asp-for="PageDescription" class="form-control" placeholder="Describe your page"/>
+        <span asp-validation-for="PageDescription"></span>
+    </div>
+    <br/>
+    <div style="display: none">
+        <label asp-for="Tags" class="lng-LastNameRegister"></label><br />
+        <input asp-for="Tags" class="form-control"/>
+        <span asp-validation-for="Tags"></span>
+    </div>
+    <br/>
+
+    <div>
+        @Html.RadioButton("IsPrivate", "true", true)
+        <span>Private Page</span> <br />
+        @Html.RadioButton("IsPrivate", "false" )
+        <span>Public Page</span> <br />
+    </div>
+
+    <br/>
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-dark lng-RegisterButton">Create Page!</button>
+    </div>
+</form>
+
+<script src="~/js/Shared/Dropdown.js"></script>

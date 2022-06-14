@@ -9,14 +9,19 @@ namespace IChirper.Controllers;
 public class HomeController : Controller
 {
     private readonly IUserService _userService;
-    public HomeController(IUserService userService)
+    private readonly IPageService _pageService;
+    
+    public HomeController(IUserService userService, IPageService pageService)
     {
         _userService = userService;
+        _pageService = pageService;
     }
     
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View("Index");
+        var pages = await _pageService.GetAllPages();
+        
+        return View("Index", pages);
     }
 
     [Authorize]

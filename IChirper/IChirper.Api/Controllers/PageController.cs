@@ -1,3 +1,4 @@
+using IChirper.Controllers.Services.Interfaces;
 using IChirper.Controllers.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -5,7 +6,13 @@ namespace IChirper.Controllers;
 
 public class PageController : Controller
 {
-    
+    private readonly IPageService _pageService;
+
+    public PageController(IPageService pageService)
+    {
+        _pageService = pageService;
+    }
+
     [HttpGet]
     public IActionResult CreatePage()
     {
@@ -13,10 +20,10 @@ public class PageController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreatePage(PageViewModel model)
+    public async Task<IActionResult> CreatePage(CreatePageViewModel model)
     {
-        
+        await _pageService.AddNewPage(model);
 
-        return await Task.Run(() => NoContent());
+        return await Task.Run(() => RedirectToAction("Index", "Home"));
     }
 }

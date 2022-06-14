@@ -28,6 +28,10 @@ namespace IChirper.Controllers.@base.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Author")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("CreatedAt")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -229,22 +233,22 @@ namespace IChirper.Controllers.@base.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c3947f55-3f43-4ca4-9d15-40a0dfe716e7",
-                            ConcurrencyStamp = "af58cf35-1ba1-42f9-a1cc-5fa96016ab3d",
+                            Id = "e535ea38-38c6-4cd1-9bfe-dc389bb7f2ac",
+                            ConcurrencyStamp = "e5a77231-2231-4ea4-8179-1089a8f896c2",
                             Name = "moderator",
                             NormalizedName = "MODERATOR"
                         },
                         new
                         {
-                            Id = "c082dc0a-0c86-4bb1-ad14-f83acf7a7800",
-                            ConcurrencyStamp = "41f9e67b-1bd8-4fd3-8d72-a9832d6fd7e4",
+                            Id = "eeb22a02-3878-4fa2-af54-254352d9f934",
+                            ConcurrencyStamp = "13b3cb5c-71fe-495a-b23d-a84dd4ec4d94",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "fb8dcbec-7ccb-4377-ba3b-6897afce0aa0",
-                            ConcurrencyStamp = "c794b267-4ff4-4a24-bad1-beaea3ed7ed8",
+                            Id = "a3138574-071e-4118-a32a-9aa4c8caeb04",
+                            ConcurrencyStamp = "f60c2b6c-3a48-4c93-a177-6a9f9acd74ce",
                             Name = "user",
                             NormalizedName = "USER"
                         });

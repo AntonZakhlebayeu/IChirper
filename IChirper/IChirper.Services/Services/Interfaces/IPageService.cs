@@ -4,5 +4,6 @@ namespace IChirper.Controllers.Services.Interfaces;
 
 public interface IPageService
 {
-    void AddNewPage(PageViewModel model);
+    Task AddNewPage(CreatePageViewModel model);
+    Task<List<PageViewModel>> GetAllPages();
 }

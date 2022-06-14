@@ -41,6 +41,7 @@ public static class ConfigureIChirperDbContext
             m.HasAlternateKey(p => p.Id);
             m.Property(p => p.Title).IsRequired();
             m.Property(p => p.PageDescription).IsRequired();
+            m.Property(p => p.Author).IsRequired();
             m.Property(p => p.CreatedAt).IsRequired();
             m.Property(p => p.IsPrivate).IsRequired();
             m.Property(p => p.UpdatedAt);
