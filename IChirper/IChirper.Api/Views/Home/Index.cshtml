@@ -14,7 +14,7 @@
             <div class="card-body">
                 <h5 class="card-title">@pageViewModel.PageDescription</h5>
                 <p class="card-text">@pageViewModel.Author</p>
-                <a href="#" class="btn btn-primary">Check this page</a>
+                <a href="/Page/ViewPage?pageId=@pageViewModel.Id" class="btn btn-primary">Check this page</a>
             </div>
             <div class="card-footer text-muted">
                 Last updated @MathF.Round((float)DateTime.Now.Subtract(Convert.ToDateTime(pageViewModel.UpdatedAt)).TotalMinutes) minutes ago

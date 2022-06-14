@@ -42,4 +42,10 @@ public class PageService : IPageService
     {
         return await Task.Run(() => GetAllPages(_pageRepository.GetAll()).OrderByDescending(i => i.Id).ToList());
     }
+
+    public async Task<PageViewModel> GetPageById(int id)
+    {
+        var page = await _pageRepository.FindWithAlternateKey(id);
+        return GetPageViewModel(page);
+    }
 }

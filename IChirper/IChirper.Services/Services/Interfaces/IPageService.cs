@@ -9,4 +9,5 @@ public interface IPageService
 {
     Task AddNewPage(CreatePageViewModel model);
     Task<List<PageViewModel>> GetAllPages();
+    Task<PageViewModel> GetPageById(int id);
 }

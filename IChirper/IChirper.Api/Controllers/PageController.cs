@@ -28,4 +28,14 @@ public class PageController : Controller
 
         return await Task.Run(() => RedirectToAction("Index", "Home"));
     }
+    
+    [HttpGet]
+    public async Task<IActionResult> ViewPage(int pageId)
+    {
+        if (pageId == 0) return NoContent();
+        
+        var page = await _pageService.GetPageById(pageId);
+
+        return View("PageView", page);
+    }
 }
