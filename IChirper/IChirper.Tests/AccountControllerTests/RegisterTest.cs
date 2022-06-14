@@ -1,12 +1,12 @@
-using IChirper.@base.Controllers;
-using IChirper.Services.Interfaces;
-using IChirper.ViewModels;
+using IChirper.Controllers;
+using IChirper.Controllers.Services.Interfaces;
+using IChirper.Controllers.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
 
-namespace IChirper.Tests.AccountControllerTests;
+namespace IChirper.Controllers.Tests.AccountControllerTests;
 
 public class RegisterTest
 {

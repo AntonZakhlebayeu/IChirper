@@ -1,9 +1,9 @@
 using System.Linq.Expressions;
-using IChirper.Data.Interfaces;
+using IChirper.Controllers.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace IChirper.Data.Repositories;
+namespace IChirper.Controllers.Data.Repositories;
 
 public class EntityBaseRepository<T> : IEntityBaseRepository<T> where T : class
 {

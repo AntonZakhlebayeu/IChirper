@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace IChirper.Views.Home;
+namespace IChirper.Controllers.Views.Home;
 
 public class Profile : PageModel
 {

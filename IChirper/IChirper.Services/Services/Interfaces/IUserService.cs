@@ -1,8 +1,8 @@
-using IChirper.Models;
-using IChirper.ViewModels;
+using IChirper.Controllers.Models;
+using IChirper.Controllers.ViewModels;
 using Microsoft.AspNetCore.Identity;
 
-namespace IChirper.Services.Interfaces;
+namespace IChirper.Controllers.Services.Interfaces;
 
 public interface IUserService
 {

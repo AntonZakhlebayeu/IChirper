@@ -1,22 +1,27 @@
 ﻿using System.Diagnostics;
-using IChirper.Services.Interfaces;
-using IChirper.ViewModels;
+using IChirper.Controllers.Services.Interfaces;
+using IChirper.Controllers.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IChirper.@base.Controllers;
+namespace IChirper.Controllers;
 
 public class HomeController : Controller
 {
     private readonly IUserService _userService;
-    public HomeController(IUserService userService)
+    private readonly IPageService _pageService;
+    
+    public HomeController(IUserService userService, IPageService pageService)
     {
         _userService = userService;
+        _pageService = pageService;
     }
     
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View("Index");
+        var pages = await _pageService.GetAllPages();
+        
+        return View("Index", pages);
     }
 
     [Authorize]

@@ -1,7 +1,7 @@
-using IChirper.Data.Interfaces;
-using IChirper.Services.Interfaces;
+using IChirper.Controllers.Data.Interfaces;
+using IChirper.Controllers.Services.Interfaces;
 
-namespace IChirper.Services.Classes;
+namespace IChirper.Controllers.Services.Classes;
 
 public class UserValidationService : IUserValidation
 {

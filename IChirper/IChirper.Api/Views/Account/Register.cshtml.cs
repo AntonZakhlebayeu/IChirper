@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace IChirper.Views.Account;
+namespace IChirper.Controllers.Views.Account;
 
 public class Register : PageModel
 {

@@ -1,9 +1,9 @@
 using System.Security.Claims;
-using IChirper.ViewModels;
+using IChirper.Controllers.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IChirper.Tests.AccountControllerTests;
+namespace IChirper.Controllers.Tests.AccountControllerTests;
 
 public static class GetMockData
 {

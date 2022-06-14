@@ -1,4 +1,4 @@
-namespace IChirper.Services.Interfaces;
+namespace IChirper.Controllers.Services.Interfaces;
 
 public interface IUserValidation
 {

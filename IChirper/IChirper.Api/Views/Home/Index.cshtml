@@ -1,8 +1,24 @@
-﻿@{
+﻿@model List<IChirper.Controllers.ViewModels.PageViewModel>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @foreach (var pageViewModel in Model)
+    {
+        <div class="card text-center">
+            <div class="card-header">
+                @pageViewModel.Title
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@pageViewModel.PageDescription</h5>
+                <p class="card-text">@pageViewModel.Author</p>
+                <a href="#" class="btn btn-primary">Check this page</a>
+            </div>
+            <div class="card-footer text-muted">
+                Last updated @MathF.Round((float)DateTime.Now.Subtract(Convert.ToDateTime(pageViewModel.UpdatedAt)).TotalMinutes) minutes ago
+            </div>
+        </div>
+    }
 </div>

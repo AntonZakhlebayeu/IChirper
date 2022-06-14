@@ -1,12 +1,12 @@
-using IChirper.@base.Controllers;
-using IChirper.Services.Interfaces;
-using IChirper.ViewModels;
+using IChirper.Controllers;
+using IChirper.Controllers.Services.Interfaces;
+using IChirper.Controllers.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
-using static IChirper.Tests.AccountControllerTests.GetMockData;
+using static IChirper.Controllers.Tests.AccountControllerTests.GetMockData;
 
-namespace IChirper.Tests.HomeControllerTests;
+namespace IChirper.Controllers.Tests.HomeControllerTests;
 
 public class ProfileTest
 {
